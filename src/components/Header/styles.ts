@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+  page: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -22,6 +23,14 @@ export const Container = styled.div<ContainerProps>`
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+          margin-left: 5px;
+        }
 
         & + a {
           margin-left: 32px;
