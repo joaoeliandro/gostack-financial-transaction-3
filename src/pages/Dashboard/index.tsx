@@ -35,9 +35,9 @@ const Dashboard: React.FC = () => {
   const [balance, setBalance] = useState<Balance>({} as Balance);
 
   useEffect(() => {
-    api.get('transactions').then(response => {
-      setTransactions(response.data.transactions);
-      setBalance(response.data.balance);
+    api.get('/transactions').then(results => {
+      setTransactions(results.data.transactions);
+      setBalance(results.data.balance);
     });
   }, []);
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { FiChevronRight } from 'react-icons/fi';
 
 import { Container } from './styles';
 
@@ -20,17 +19,12 @@ const Header: React.FC<HeaderProps> = ({
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        {page === 'dashboard' ? (
-          <Link to="/import">
-            Importar
-            <FiChevronRight size={16} />
-          </Link>
-        ) : (
-          <Link to="/">
-            Importar
-            <FiChevronRight size={16} />
-          </Link>
-        )}
+        <Link to="/" id="dashboard">
+          Listagem
+        </Link>
+        <Link to="/import" id="import">
+          Importar
+        </Link>
       </nav>
     </header>
   </Container>
